@@ -1,0 +1,11 @@
+node_modules/
+dist/
+release/
+.vercel/
+*.log
+.DS_Store
+# Android release signing (never commit)
+android/keystore.properties
+android/keystore/
+*.jks
+*.keystore

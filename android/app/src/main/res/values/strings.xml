@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Millennium Snake</string>
+    <string name="title_activity_main">Millennium Snake</string>
+    <string name="package_name">com.millenniumsnake.game</string>
+    <string name="custom_url_scheme">com.millenniumsnake.game</string>
+</resources>
