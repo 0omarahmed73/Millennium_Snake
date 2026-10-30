@@ -23,7 +23,7 @@ export function HowToPlay() {
         {touch ? 'Drag anywhere on the screen, or tap the arrow pad, to steer the dragon.' : 'Use the arrow keys or WASD to steer the dragon. Space pauses.'}
       </p>
       <p className="body-text" style={{ ...at(P, L.avoidText), fontSize: px(P, 10.2) }}>
-        Don&apos;t hit the stone pillars or your own body. Walls wrap around.
+        Don&apos;t hit pillars or your own body.
       </p>
       <GoldButton variant="hot" className="hot--primary" style={slice(P, L.gotIt)} onClick={done} aria-label="Got it" />
     </ArtStage>

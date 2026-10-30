@@ -68,7 +68,7 @@ export const SETTINGS = {
 export const HOWTO = {
   back: [11, 10, 42, 41],
   controlText: [109, 175, 290, 214],
-  avoidText: [109, 309, 290, 336],
+  avoidText: [109, 315, 292, 333],
   gotIt: [37, 356, 267, 407],
 } as const;
 
