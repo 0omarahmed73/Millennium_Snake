@@ -1,6 +1,6 @@
 /* Millennium Snake service worker: precache shell, cache-first for static assets, network-first for navigations. */
-const VERSION = 'ms-v2';
-const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/favicon.png', '/icons/icon-maskable-512.png', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/apple-touch-icon.png'];
+const VERSION = 'ms-v3';
+const SHELL = ['/', '/index.html', '/manifest.webmanifest', '/favicon.png', '/art/panel-menu.webp', '/icons/icon-maskable-512.png', '/icons/icon-192.png', '/icons/icon-512.png', '/icons/apple-touch-icon.png'];
 
 self.addEventListener('install', (e) => {
   e.waitUntil(caches.open(VERSION).then((c) => c.addAll(SHELL)).then(() => self.skipWaiting()));

@@ -50,6 +50,8 @@ export function loadGameArt(): Promise<GameArt> {
 }
 
 /** Preload every UI image so screens never pop in. Failures are non-fatal. */
-export function preloadImages(urls: string[]): Promise<void> {
-  return Promise.all(urls.map((u) => load(u).catch(() => null))).then(() => undefined);
+export function preloadImages(urls: string[], onProgress?: (done: number, total: number) => void): Promise<void> {
+  let done = 0;
+  const tick = () => onProgress?.(++done, urls.length);
+  return Promise.all(urls.map((u) => load(u).catch(() => null).finally(tick))).then(() => undefined);
 }
