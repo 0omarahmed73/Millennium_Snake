@@ -39,6 +39,10 @@ img { -webkit-user-drag: none; }
 .art-mirror { position: absolute; top: 0; height: 100%; width: 100%; display: block; pointer-events: none; transform: scaleX(-1); }
 .art-mirror--left { right: 100%; }
 .art-mirror--right { left: 100%; }
+/* Mirrors are flipped, so the side touching the stage is their local left (left) / right (right).
+   Keep only a narrow band next to the stage (covers phone side gaps); fade out beyond it. */
+.art-mirror--left { -webkit-mask-image: linear-gradient(to right, #000 0%, #000 9%, transparent 26%); mask-image: linear-gradient(to right, #000 0%, #000 9%, transparent 26%); }
+.art-mirror--right { -webkit-mask-image: linear-gradient(to left, #000 0%, #000 9%, transparent 26%); mask-image: linear-gradient(to left, #000 0%, #000 9%, transparent 26%); }
 .art-screen--fit .art-stage { box-shadow: none; }
 .stage-fill { position: absolute; inset: 0; }
 .art-below { width: min(100%, 560px); flex: 1; min-height: 0; overflow-y: auto; padding: 14px 16px 16px; display: flex; flex-direction: column; justify-content: flex-end; gap: 12px; }

@@ -9,3 +9,4 @@ android/keystore.properties
 android/keystore/
 *.jks
 *.keystore
+.vercel
